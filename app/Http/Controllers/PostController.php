@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    //
+    public function show($post): mixed
+    {
+        return view("post", compact('post'));
+    }
 }

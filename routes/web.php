@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -35,19 +37,23 @@ Route::get('/request-test', function () {
 //     ]);
 // });
 
-Route::get('/posts/{post}', function ($post) {
-    $posts = [
-        'first-post' => 'My first post',
-        'second-post' => 'My second post',
-        'third-post' => 'My third post',
-    ];
+// Route::get('/posts/{post}', function ($post) {
+//     $posts = [
+//         'first-post' => 'My first post',
+//         'second-post' => 'My second post',
+//         'third-post' => 'My third post',
+//     ];
 
-    if ( ! array_key_exists($post, $posts)) { abort(404); }
+//     if ( ! array_key_exists($post, $posts)) { abort(404); }
 
-    
-    return view('posts', [
-        'post' => $posts[$post] ,
-    ]);
-});
+
+//     return view('posts', [
+//         'post' => $posts[$post] ,
+//     ]);
+// });
+
+Route::get('/posts/{post}', [PostController::class, 'show']);
+
+
 
 
