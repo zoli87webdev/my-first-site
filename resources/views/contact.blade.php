@@ -1,3 +1,7 @@
-<body>
-   Hello,  {{ $name }}
-</body>
+@extends('pastel-layout')
+
+@section('title', 'Kapcsolat')
+
+
+
+

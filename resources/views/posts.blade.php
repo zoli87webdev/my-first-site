@@ -1,3 +1,3 @@
-<h1>
-    {{ $post }}
-</h1>
+@extends('pastel-layout')
+
+@section('title', 'Első blogbejegyzés')

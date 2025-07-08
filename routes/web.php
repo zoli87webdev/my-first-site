@@ -20,7 +20,7 @@ Route::get('/pass-array' , function(){
         'Build a web app',
         'Deploy to production',
     ];
-    return view('tasks', [
+    return view('pass-array', [
         'tasks' => $tasks,
     ]);
 });

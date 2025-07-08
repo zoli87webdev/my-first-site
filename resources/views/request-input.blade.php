@@ -1,1 +1,3 @@
-<h1>{{ $title }}</h1>
+@extends('pastel-layout')
+
+@section('title', 'Adatküldés URL segítségével')
